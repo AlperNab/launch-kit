@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "launch-kit"
+version = "0.1.0"
+description = "README → complete launch marketing package: Show HN, Product Hunt, Reddit, Twitter, LinkedIn"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Alper Nabil Gabra Zakher", email = "contact@alpernabil.com" }]
+keywords = ["launch", "marketing", "open-source", "hacker-news", "product-hunt", "claude", "ai"]
+requires-python = ">=3.10"
+dependencies = ["anthropic>=0.25.0"]
+
+[project.scripts]
+launch-kit = "launch_kit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/AlperNab/launch-kit"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/launch_kit"]
